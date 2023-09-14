@@ -1,0 +1,24 @@
+Dnevnik spavanja
+
+Ova web aplikacija služi za praćenje spavanja te kao pomoć kod samoprocjenje sna.
+
+Funkcije 
+
+- Dodavanje novog sna
+    -Ocjena od 1-5
+    -Unos datuma
+    -Unos početka sna
+    -Unos završetka sna
+    -Komentar
+- Lista snova
+    -Pohranjeni svi snovi koje je korisnik unesao
+    -Mogućnost brisanja snova
+    -Mogućnost izmjene snova 
+
+Pokretanje
+
+Preuzmite cijeli sadržaj iz github repozitorija.
+Potrebno se pozicionirati u app.py gdje će te pokrenuti web app.
+Izradite docker image: docker -t flask .
+Pokrenite docker image : docker run -d -p 3000:5000 flask
+U preglednik upisati localhost:5000
