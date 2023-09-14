@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<head><title>Dnevnik spavanja</title></head>
+{% block head %} 
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+   <h1>Izmjena dnevnika spavanja</h1>
+   <div style="display: flex;flex-direction: column;width: 30%;gap: 20px;">
+    <div name="form">
+        <form action="/update/{{san.id_san}}" method="POST">
+            <div style="display: flex; gap: 10px;">
+                <div>1</div><input value="{{san.ocjena}}" type="range" min="1" max="5" name="dream_quality" placeholder="Kvaliteta sna"><div>5</div>
+            </div>
+            <textarea  name="dream_problems" placeholder="Problemi sna">{{san.kvaliteta_sna}}</textarea>
+            <input value = "{{san.dan}}" type="date" name="dream_date" placeholder="Datum">
+            <input value = "{{san.vrijeme_pocetka}}" type="time" name="dream_start" placeholder="Pocetak sna">
+            <input value="{{san.vrijeme_zavrsetka}}" type="time" name="dream_finish" placeholder="Zavrsetak sna">
+            <input type="submit" value="Ažuriraj">
+        </form>
+    </div>
+    </div>
+</div>
+{% endblock %}

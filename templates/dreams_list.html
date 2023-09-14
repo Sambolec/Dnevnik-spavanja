@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="wrapper">
+        <h1>Popis snova</h1>
+        <a href="/create-dream"><button>Novi san</button></a>
+
+    </div>
+    <table>
+        <tr>
+            <th>Dan u tjednu</th>
+            <th>Početak spavanja</th> 
+            <th>Završetak spavanja</th>
+            <th>Kvaliteta sna 0-5</th>
+            <th>Snovi</th>
+            <th>Trajanje spavanja</th>
+            <th></th>
+        </tr>
+        {% for san in snovi %}
+        <tr>
+            <td>{{san.dan }}</td>
+            <td>{{san.vrijeme_pocetka}}</td>
+            <td>{{san.vrijeme_zavrsetka}}</td> 
+            <td>{{san.ocjena}}</td>
+            <td>{{san.kvaliteta_sna}}</td>
+            <td>{{san.trajanje}}</td>
+            <td class="buttons-wrapper"><a href="/delete/{{san.id_san}}"><button>Obriši</button></a>
+            <a href="/update/{{san.id_san}}"><button>Izmjeni</button></a></td>
+            
+        </tr>
+        {% endfor%}
+    </table>
+</div>
+{% endblock %}
