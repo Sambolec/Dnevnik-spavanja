@@ -17,8 +17,9 @@ Funkcije
 
 Pokretanje
 
+Potrebno je instalirati pip install flask i pip install flask_alchemy
 Preuzmite cijeli sadržaj iz github repozitorija.
-Potrebno se pozicionirati u app.py gdje će te pokrenuti web app.
+Potrebno se pozicionirati se u folder u kojem se nalazi app.py gdje će te pokrenuti web app.
 Izradite docker image: docker -t flask .
 Pokrenite docker image : docker run -d -p 3000:5000 flask
-U preglednik upisati localhost:5000
+U preglednik upisati 127.0.0.1:5000 ili localhost:5000
